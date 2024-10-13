@@ -9,11 +9,11 @@ function strOrNum (value: string | number) {
     }
   }
   
-  strOrNum('hello world');
-  strOrNum(777);
+strOrNum('hello world');
+strOrNum(777);
 
 
-  // 교차 타입
+// 교차 타입
 interface Hyojin {
   name: string;
   age: number;
