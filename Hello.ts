@@ -1,4 +1,4 @@
-// 이 변수에는 string이 담긴 array만 들어올 수 있습니다
+// 이 변수에는 string이 담긴 array만 가능
 let 이름 :string[] = ['kim', 'park'];
 
 // 오브젝트 자료형
@@ -14,7 +14,7 @@ let 김한주 :Man = true;
 
 type animal = {
     name : string
-    /*[key : string] : string*/ // 글자로 된 모든 속성 타입은 : string
+    /*[key : string] : string (글자로 된 모든 속성 타입이 string임을 명시) */
 }
 let cat : animal = { name : "haru" }
 
