@@ -22,4 +22,4 @@ let person: { name: string; age: number } = {
 
 
 // 불리언
-let isThatTrue: boolean = true;
+let isThatTrue: boolean = false;
