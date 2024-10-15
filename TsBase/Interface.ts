@@ -168,16 +168,3 @@ const Hhuman: Korean = {
     favoriteLanguage: "kor",
     isLiveInSeoul: false,
 }
-
-// 객체 프로퍼티 동적 접근 정의
-interface MyObject {
-    [key: string]: number;
-}
-
-const obj: MyObject = {
-    foo: 1,
-    bar: 2,
-};
-
-console.log(obj.foo);
-console.log(obj['bar']);
