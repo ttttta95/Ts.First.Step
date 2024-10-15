@@ -116,3 +116,68 @@ let Ruser: Readonly<PIUser> = {
     name: "neo",
     age: 36
 };
+
+// 인터페이스 호환
+interface IFullName {
+    firstName: string,
+    lastName: string
+}
+
+interface IFullName {
+    middleName: string
+}
+
+const fullName: IFullName = {
+    firstName: "yoon",
+    middleName: "hyo",
+    lastName: "jin"
+};
+
+// 인터페이스 확장 (extends)
+interface HPerson {
+    name: string;
+}
+
+interface Developer extends HPerson {
+    skill: string;
+}
+let fe: Developer = { name: 'josh', skill: 'TypeScript' };
+
+// 타입 별칭으로 구현한 인터페이스 확장
+type Person = { name: string };
+type developer = Person & { skill: string };
+let fee: developer = { name: 'minju', skill: 'TypeScript' };
+
+// 클래스는 하나만 extends할 수 있지만 인터페이스는 여러 개를 extends 가능
+interface human {
+    name: string;
+    age: number;
+}
+
+interface Programmer {
+    favoriteLanguage: string;
+}
+
+interface Korean extends human, Programmer { // 두 개의 인터페이스를 받아 확장
+    isLiveInSeoul: boolean;
+}
+
+const Hhuman: Korean = {
+    name: "윤효진",
+    age: 33,
+    favoriteLanguage: "kor",
+    isLiveInSeoul: false,
+}
+
+// 객체 프로퍼티 동적 접근 정의
+interface MyObject {
+    [key: string]: number;
+}
+
+const obj: MyObject = {
+    foo: 1,
+    bar: 2,
+};
+
+console.log(obj.foo);
+console.log(obj['bar']);
