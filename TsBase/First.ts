@@ -28,3 +28,9 @@ function getAge(age: number | string): string {
         return age;
     }
 }
+
+// 구조 분해 할당
+const [a, b, ...rest] = [1, 2, 3, 4, 5]
+a; // 1
+b; // 2
+rest; // rest 라는 변수에 [3, 4, 5] 라는 배열이 할당

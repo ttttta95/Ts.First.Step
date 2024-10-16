@@ -45,3 +45,26 @@ function addMul(method, ...rest) {
         return mul;
     }
 }
+console.log(addMul('add',1,2,3,4)); // 10
+console.log(addMul('multiply', 1,2,3,4)); // 24
+
+// rest 문법 적용
+// 배열의 인덱스를 순회하며 그 키 값을 totalOfNums에 저장후 합산
+// 인자를 배열로 받아오기 때문에 rest 파라미터 사용시 인자를 배열로 정의
+function pluss(...nums: number[]): number {
+    let totalOfNums = 0;
+    for (let key in nums) {
+        totalOfNums += nums[key];
+    }
+    return totalOfNums;
+}
+
+// this
+interface UUser {
+    name: string;
+}
+const SSam: UUser = { name: 'hyojin'}
+function showName() {
+    console.log(this.name)
+}
+const aj = showName.bind(SSam);
