@@ -25,6 +25,7 @@ function ADD(...rest) {
 console.log(ADD(1, 2, 3));
 
 // 기본인자 추가
+// 단 rest 파라미터는 항상 제일 마지막 파라미터 존재 
 function addMul(method, ...rest) {
     if (method === 'add') {
         let sum = 0;
